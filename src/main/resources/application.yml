@@ -1,0 +1,12 @@
+server:
+  port: 8866
+spring:
+  main:
+    banner-mode: off
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+  elasticsearch:
+    rest:
+      uris: localhost:9200
