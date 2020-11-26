@@ -35,7 +35,6 @@ public class ElasticEntity {
     @Field(type = FieldType.Keyword)
     private List<String> tags;
 
-    @Field(type = FieldType.Text, analyzer = "ik_max_word")
+    @Field(type = FieldType.Text, analyzer = "ik_max_word", searchAnalyzer = "ik_smart")
     private String desc;
-
 }
