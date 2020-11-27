@@ -173,7 +173,7 @@ public class ElasticEntityService {
         }
         if (!CollectionUtils.isEmpty(tags)) {
             for (String tag : tags) {
-                defaultQueryBuilder.must(QueryBuilders.matchQuery("tags", tag));
+                defaultQueryBuilder.must(QueryBuilders.termsQuery("tags.keyword", tag));
             }
         }
         return defaultQueryBuilder;
